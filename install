@@ -2,7 +2,12 @@
 
 set -e
 
-mkdir -p .local/bin .local/opt .config
+mkdir -p .local/bin .local/opt .local/share/fonts .config
+
+nerd_font_version="v3.5.1"
+curl -4 -fL -O https://github.com/ryanoasis/nerd-fonts/releases/download/"$nerd_font_version"/JetBrainsMono.zip
+unzip -o JetBrainsMono.zip -d .local/share/fonts
+rm JetBrainsMono.zip
 
 curl -fL -O https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 tar xzvf nvim-linux-x86_64.tar.gz

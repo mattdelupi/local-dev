@@ -10,3 +10,9 @@ rm nvim-linux-x86_64.tar.gz
 rm -rf opt/nvim
 mv nvim-linux-x86_64 opt/nvim
 ln -sfn ../opt/nvim/bin/nvim bin/nvim
+
+fzf_version="0.75.0"
+curl -fL -O https://github.com/junegunn/fzf/releases/download/v0.75.0/fzf-"$fzf_version"-linux_amd64.tar.gz
+tar xzvf fzf-"$fzf_version"-linux_amd64.tar.gz
+rm fzf-"$fzf_version"-linux_amd64.tar.gz
+mv fzf bin/
